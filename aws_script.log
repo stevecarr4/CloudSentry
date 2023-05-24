@@ -1,0 +1,316 @@
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.session:Setting config variable for region to 'us-east-1'
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+DEBUG:botocore.credentials:Looking for credentials via: custom-process
+DEBUG:botocore.credentials:Looking for credentials via: config-file
+DEBUG:botocore.credentials:Looking for credentials via: ec2-credentials-file
+DEBUG:botocore.credentials:Looking for credentials via: boto-config
+DEBUG:botocore.credentials:Looking for credentials via: container-role
+DEBUG:botocore.credentials:Looking for credentials via: iam-role
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 169.254.169.254:80
+DEBUG:botocore.utils:Caught retryable HTTP exception while making metadata service request to http://169.254.169.254/latest/api/token: Could not connect to the endpoint URL: "http://169.254.169.254/latest/api/token"
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 65] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 94, in _send_request
+    rval = super()._send_request(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 123, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 218, in send
+    return super().send(str)
+           ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 976, in send
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPConnection object at 0x105eb1c90>: Failed to establish a new connection: [Errno 65] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/utils.py", line 456, in _fetch_metadata_token
+    response = self._session.send(request.prepare())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "http://169.254.169.254/latest/api/token"
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 169.254.169.254:80
+DEBUG:botocore.utils:Caught retryable HTTP exception while making metadata service request to http://169.254.169.254/latest/meta-data/iam/security-credentials/: Could not connect to the endpoint URL: "http://169.254.169.254/latest/meta-data/iam/security-credentials/"
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 64] Host is down
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 94, in _send_request
+    rval = super()._send_request(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 123, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 218, in send
+    return super().send(str)
+           ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 976, in send
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPConnection object at 0x105f4ffd0>: Failed to establish a new connection: [Errno 64] Host is down
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/utils.py", line 509, in _get_request
+    response = self._session.send(request.prepare())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "http://169.254.169.254/latest/meta-data/iam/security-credentials/"
+DEBUG:botocore.utils:Max number of attempts exceeded (1) when attempting to retrieve data from metadata service.
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x105d876a0>
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/data/ec2/2016-11-15/service-2.json
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/data/ec2/2016-11-15/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x105c7d580>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+DEBUG:botocore.credentials:Looking for credentials via: custom-process
+DEBUG:botocore.credentials:Looking for credentials via: config-file
+DEBUG:botocore.credentials:Looking for credentials via: ec2-credentials-file
+DEBUG:botocore.credentials:Looking for credentials via: boto-config
+DEBUG:botocore.credentials:Looking for credentials via: container-role
+DEBUG:botocore.credentials:Looking for credentials via: iam-role
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 169.254.169.254:80
+DEBUG:botocore.utils:Caught retryable HTTP exception while making metadata service request to http://169.254.169.254/latest/api/token: Could not connect to the endpoint URL: "http://169.254.169.254/latest/api/token"
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 64] Host is down
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 94, in _send_request
+    rval = super()._send_request(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 123, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 218, in send
+    return super().send(str)
+           ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 976, in send
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPConnection object at 0x10af27e10>: Failed to establish a new connection: [Errno 64] Host is down
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/utils.py", line 456, in _fetch_metadata_token
+    response = self._session.send(request.prepare())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "http://169.254.169.254/latest/api/token"
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 169.254.169.254:80
+DEBUG:botocore.utils:Caught retryable HTTP exception while making metadata service request to http://169.254.169.254/latest/meta-data/iam/security-credentials/: Could not connect to the endpoint URL: "http://169.254.169.254/latest/meta-data/iam/security-credentials/"
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 64] Host is down
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 94, in _send_request
+    rval = super()._send_request(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 123, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/awsrequest.py", line 218, in send
+    return super().send(str)
+           ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 976, in send
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPConnection object at 0x10af93310>: Failed to establish a new connection: [Errno 64] Host is down
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/utils.py", line 509, in _get_request
+    response = self._session.send(request.prepare())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "http://169.254.169.254/latest/meta-data/iam/security-credentials/"
+DEBUG:botocore.utils:Max number of attempts exceeded (1) when attempting to retrieve data from metadata service.
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x105d876a0>
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/data/s3/2006-03-01/service-2.json
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x105c7d800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x105e1f420>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x105c7d580>
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
